@@ -14,6 +14,7 @@ PassProtectorPy/
 │   ├── test_encryption.py
 │   ├── test_file_handling.py
 │   ├── test_user_interface.py
+├── main.py
 ├── .gitignore
 ├── LICENSE
 ├── README.md

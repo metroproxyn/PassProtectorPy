@@ -1,5 +1,9 @@
 import hashlib
 from cryptography.fernet import Fernet
+'''
+For the additional information about Fernet, see:
+https://cryptography.io/en/latest/fernet/
+'''
 
 class PasswordManager:
     def __init__(self, key):

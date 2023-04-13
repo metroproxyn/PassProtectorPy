@@ -1,12 +1,14 @@
-# TODO: import libraries
+import hashlib
+from cryptography.fernet import Fernet
+
 class PasswordManager:
-    def __init__():
+    def __init__(self, key):
     # TODO: add more functionality
     
-    def encrypt():
+    def encrypt(self, password):
         return
     # TODO: add more functionality
     
-    def decrypt():
+    def decrypt(self, encrypted_password):
         return
     # TODO: add more functionality

@@ -23,3 +23,10 @@ class EncryptionTestCase(unittest.TestCase): # class that defines a collection o
 
     """def test_invalid_inputs():
         #TODO: add more functionality"""
+    
+
+# To run (in case you have issues): 
+# export PYTHONPATH="${PYTHONPATH}:/Users/username/Documents/GitHub/PassProtectorPy"
+# python -m unittest -v test_encryption.py
+# python3 -m pip install cryptography
+# /usr/bin/python3 -m unittest -v test_encryption.py

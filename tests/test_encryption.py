@@ -1,14 +1,15 @@
 import unittest
-from passprotector.encryption import encrypt, decrypt
+from passprotector.encryption import PasswordManager
 
 #TODO: write the test for encryption.py module
 class EncryptionTestCase(unittest.TestCase): # class that defines a collection of individual test methods.
     def test_encrypt_decrypt(self):
         #TODO: add more functionality
         plaintext = b"let's test our cipher" # In Python, a byte string is denoted
-        key= b"secretkey"                    # by adding the character 'b' before the start of the string. 
-        ciphertext = encrypt(plaintext, key)
-        decrypted_plaintext = decrypt(ciphertext, key)
+        key= b"secretkey"                    # by adding the character 'b' before the start of the string.
+        pm = PasswordManager(key)
+        ciphertext = pm.encrypt(plaintext, key)
+        decrypted_plaintext = pm.decrypt(ciphertext, key)
         self.assertEqual(plaintext, decrypted_plaintext)
         """
         self.assertEqual() is an assertion method in the unittest library 

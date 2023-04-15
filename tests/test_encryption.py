@@ -4,7 +4,6 @@ from passprotector.encryption import PasswordManager
 #TODO: write the test for encryption.py module
 class EncryptionTestCase(unittest.TestCase): # class that defines a collection of individual test methods.
     def test_encrypt_decrypt(self):
-        #TODO: add more functionality
         plaintext = b"let's test our cipher" # In Python, a byte string is denoted
         key= b"secretkey"                    # by adding the character 'b' before the start of the string.
         pm = PasswordManager(key)
@@ -22,9 +21,15 @@ class EncryptionTestCase(unittest.TestCase): # class that defines a collection o
         """
 
 
-    """def test_invalid_inputs():
-        #TODO: add more functionality"""
-    
+    def test_invalid_inputs(self):
+        plaintext = ""
+        key = "password"
+        pm = PasswordManager(key)
+        with self.assertRaises (ValueError):
+            pm.encrypt (plaintext, key)
+            ciphertext = ""
+        with self.assertRaises (ValueError):
+            pm.decrypt (ciphertext, key)
 
 # To run (in case you have issues): 
 # export PYTHONPATH="${PYTHONPATH}:/Users/username/Documents/GitHub/PassProtectorPy"

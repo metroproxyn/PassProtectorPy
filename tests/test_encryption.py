@@ -1,7 +1,12 @@
 import unittest
 from passprotector.encryption import PasswordManager
 
-#TODO: write the test for encryption.py module
+# To run (in case you have some issues): 
+# export PYTHONPATH="${PYTHONPATH}:/Users/username/Documents/GitHub/PassProtectorPy"
+# python -m unittest -v test_encryption.py
+# python3 -m pip install cryptography
+# /usr/bin/python3 -m unittest -v test_encryption.py
+
 class EncryptionTestCase(unittest.TestCase): # class that defines a collection of individual test methods.
     def test_encrypt_decrypt(self):
         plaintext = b"let's test our cipher" # In Python, a byte string is denoted
@@ -31,8 +36,5 @@ class EncryptionTestCase(unittest.TestCase): # class that defines a collection o
         with self.assertRaises (ValueError):
             pm.decrypt (ciphertext, key)
 
-# To run (in case you have issues): 
-# export PYTHONPATH="${PYTHONPATH}:/Users/username/Documents/GitHub/PassProtectorPy"
-# python -m unittest -v test_encryption.py
-# python3 -m pip install cryptography
-# /usr/bin/python3 -m unittest -v test_encryption.py
+if __name__ == '__main__':
+    unittest.main()

@@ -1,5 +1,5 @@
 import unittest
-from passprotector.encryption import PasswordManager
+from src.encryption import PasswordManager
 
 # To run (in case you have some issues): 
 # export PYTHONPATH="${PYTHONPATH}:/Users/username/Documents/GitHub/PassProtectorPy"

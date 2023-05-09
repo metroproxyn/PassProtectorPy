@@ -1,11 +1,12 @@
 import os
 import unittest
-from src.file_handling import read_data
+from src.file_handling import FileHandling
 
 class TestFileHandling(unittest.TestCase):
 
     def setup(self):
-        #TODO: add more functionality
+        self.test_file = 'test.txt'
+        self.file_handling = FileHandling()
     
     def tearDown(self):
         #TODO: add more functionality

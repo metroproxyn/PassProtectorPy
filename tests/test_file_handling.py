@@ -9,13 +9,16 @@ class TestFileHandling(unittest.TestCase):
         self.file_handling = FileHandling()
     
     def tearDown(self):
-        #TODO: add more functionality
+        if os.path.isfile(self.test_file):
+            os.remove(self.test_file)
     
     def test_write_to_file(self):
         #TODO: add more functionality
+        content = "Test content"
     
     def test_read_to_file(self):
         #TODO: add more functionality
+        content = "Test content"
     
     def test_file_exists(self):
         #TODO: add more functionality
